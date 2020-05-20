@@ -1,0 +1,293 @@
+/* Large desktops and laptops */
+@media (max-width: 1200px) {
+  #jstore-css .container{
+    max-width: 1170px;
+  }
+  #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
+    flex: 0 1 30%
+  }
+}
+
+@media (max-width: 992px) {
+  #jstore-css .container{
+    max-width: 970px;
+  }
+  #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
+    flex: 0 1 47%
+  }
+  #lsp-block-popup .lsp-popup-cont {
+    width: 764px;
+    margin-left: -382px;
+  }
+  #lsp-block-items-popup .lsp-popup-item-image-c,
+  #lsp-block-items-popup .lsp-popup-item-description-block{
+    margin: 0 auto;
+    float: none;
+    height: auto;
+  }
+  #lsp-block-items-popup .lsp-popup-item-image{
+    height: 300px;
+    padding: 15px 0;
+  }
+  #jstore-css #lsp-block-content .lsp-block-cartpage-inner{
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  #jstore-css .container{
+    max-width: none;
+  }
+  #jstore-css .content-right-side{
+    padding: 0;
+    margin: 20px 0 0 0;
+    //.lsp-block-items-list {
+    //  .lsp-block-item-price{
+    //    position: static;
+    //    display: flex;
+    //    justify-content: flex-end;
+    //    align-items: center;
+    //    padding-right: 150px;
+    //    order: 4;
+    //    .lsp-block-item-measurement{
+    //      padding-left: 3px;
+    //      font-size: 18px;
+    //    }
+    //  }
+    //  .lsp-block-item-add-to-cart{
+    //    position: absolute;
+    //  }
+    //}
+  }
+  #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
+    flex: 0 1 100%
+  }
+  #lsp-block-popup .lsp-popup-cont {
+    width: 100%;
+    margin-left: -50%;
+  }
+  #lsp-block-content .lsp-form .label-row.label-row-half{
+    width: 100%;
+  }
+  .jstore-tag.lsp-block-cartpage-items tr td:first-child,
+  .jstore-tag.lsp-block-cartpage-items tr th:first-child{
+    display: none;
+  }
+
+}
+@media (max-width: 665px) {
+  #lsp-block-items-popup .lsp-modifier-item {
+    display: inline-grid;
+  }
+  #lsp-block-items-popup .lsp-modifier-summ-c{
+    margin-right: 30px;
+  }
+  #lsp-block-items-popup .lsp-modifier-name-c{
+    margin-bottom: 5px;
+  }
+  #lsp-block-items-popup .lsp-popup-item-description-block{
+    width: auto;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 610px) {
+  #jstore-css .container {
+    flex-direction: column;
+  }
+  #jstore-css .content-left-side{
+    flex: 0 0 auto;
+    #lsp-block-tree,
+    .lsp-js-recommendation-items,
+    .lsp-cart-items-list,
+    .lsp-info-message-bottom{
+      display: none;
+    }
+    .menu-more,
+    .recommendation-more,
+    .cart-more,
+    .cart-to-order{
+      display: block;
+    }
+  }
+  #jstore-css .content-right-side{
+    padding: 0;
+    margin: 20px 0 0 0;
+  }
+  #lsp-block-popup .lsp-popup-cont {
+    width: 100%;
+    padding: 10px;
+  }
+  #lsp-block-items-popup .lsp-modifer-group-items,
+  #lsp-block-items-popup .lsp-js-modifiers-container{
+    text-align: center;
+  }
+  #lsp-block-items-popup .lsp-popup-item-description-block{
+    padding: 0 10px;
+  }
+  #lsp-block-content .lsp-form .label-row-field, .jstore-tag .lsp-form .label-row-field{
+    margin: 0;
+  }
+
+  // sidebar для мобилок
+  .nav-menu,
+  .lsp-block-recommendation-wrapper,
+  .lsp-block-cart-wrapper{
+    background-color: $lessGrayColor;
+  }
+  #jstore-css .content-left-side{
+    .lsp-block-item{
+      .lsp-block-item-image{
+      }
+      .lsp-block-item-description{
+      }
+      .lsp-block-item-price{
+      }
+      .lsp-block-item-add-to-cart{
+      }
+    }
+    .jstore-block-search{
+      position: relative;
+      height: 46px;
+      margin-bottom: 10px;
+      .jstore-block-search-inner{
+        padding: 1px 10px 0 10px;
+        .lsp-block-userinfo-appeal{
+          display: none;
+        }
+        .label-row-field-search{
+          input{
+            padding-right: 16%;
+          }
+        }
+        .lsp-block-search-order-button-cont{
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 0;
+          height: 100%;
+          input{
+            height: 100%;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .lsp-block-terminalinfo{
+    .lsp-block-restinfo-inner{
+      .city-terminal-c{
+        a.cityName{
+        }
+      }
+    }
+  }
+
+  #lsp-block-userinfo{
+    .lsp-block-userinfo-inner{
+      .lsp-block-userinfo-appeal{
+        float: left;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .nav-menu{
+    background-color: $whiteColor;
+    margin-bottom: 10px;
+    position: relative;
+    #lsp-block-tree{
+      display: none;
+      li{
+        text-align: center;
+        a{
+          width: 100%;
+        }
+        ul{
+          li{
+            border: 1px solid $lessGrayColor;
+            margin: 2px 10px;
+          }
+        }
+      }
+    }
+  }
+
+  #lsp-block-cart{
+    .lsp-block-cart-inner{
+      .lsp-info-message{
+        a{
+        }
+        span{
+        }
+      }
+      .lsp-block-cart-item{
+        .lsp-block-cart-item-name{
+        }
+        .lsp-block-cart-item-row-subname{
+        }
+      }
+    }
+    .lsp-info-message-bottom{
+      & span{
+      }
+    }
+  }
+  .lsp-block-recommendation-wrapper{
+    #lsp-block-recommendation {
+      .lsp-title{
+      }
+      .lsp-js-recommendation-items{
+        display: none;
+        .lsp-block-item{
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  #jstore-css .content-left-side .cart-more{
+    font-size: 0;
+    span.arrow{
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width: 520px) {
+  #jstore-css .content-left-side #lsp-block-recommendation{
+    text-align: left;
+  }
+}
+@media (max-width: 400px) {
+  #jstore-css .content-left-side{
+    #lsp-block-userinfo .lsp-block-userinfo-inner .lsp-block-userinfo-appeal{
+      float: none;
+    }
+    .nav-menu{
+      .menu-more{
+        font-size: 0;
+        span.arrow{
+          font-size: 18px;
+        }
+      }
+    }
+    .lsp-block-cart-wrapper{
+      .cart-more{
+        right: 0;
+      }
+      a.cart-to-order{
+        display: none;
+      }
+    }
+    .lsp-block-recommendation-wrapper{
+      .recommendation-more{
+        font-size: 0;
+        span.arrow{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

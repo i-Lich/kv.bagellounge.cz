@@ -1,0 +1,410 @@
+// Their site
+.header-top{
+  //display: none;
+}
+// Sidebar
+
+#jstore-css .content-left-side{
+  flex: 0 0 220px;
+  order: 1;
+  .lsp-block-item{
+    .lsp-block-item-image{
+      display: flex;
+      align-self: center;
+    }
+    .lsp-block-item-description{
+      height: auto;
+      max-height: 75px;
+      margin-bottom: 10px;
+    }
+    .lsp-block-item-price{
+      position: static;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 150px;
+      order: 4;
+      .lsp-block-item-measurement{
+        padding-left: 3px;
+        font-size: 18px;
+      }
+    }
+    .lsp-block-item-add-to-cart{
+      order: 5;
+      position: absolute;
+      bottom: 6px;
+      align-self: flex-end;
+      width: auto;
+    }
+  }
+  .jstore-block-search{
+    background-color: $lessGrayColor;
+    border-left: 2px solid $mainColor;
+    .jstore-block-search-inner{
+      border: 0;
+      .lsp-block-userinfo-appeal{
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      .jstore-search-input{
+        font-weight: 800;
+      }
+    }
+  }
+
+  .lsp-block-terminalinfo{
+    background-color: $lessGrayColor;
+    border-left: 2px solid $mainColor;
+    .lsp-block-restinfo-inner{
+      border: 0;
+      padding: 10px;
+      .city-terminal-c{
+        text-transform: uppercase;
+        font-weight: 800;
+        a.cityName{
+          display: block;
+          padding: 15px 0;
+        }
+      }
+    }
+  }
+
+  #lsp-block-userinfo{
+    background-color: $lessGrayColor;
+    border-left: 2px solid $mainColor;
+    .lsp-block-userinfo-inner{
+      border: 0;
+      .lsp-block-userinfo-appeal{
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  #lsp-block-cart{
+
+    .lsp-block-cart-inner{
+      border: 0;
+      padding: 0;
+      min-height: 46px;
+      .lsp-info-message{
+        background-color: $lessGrayColor;
+        border-left: 2px solid $mainColor;
+        font-weight: 800;
+        color: $textColor;
+        margin: 0;
+        padding: 15px 0 15px 10px;
+        a{
+          font-weight: 800;
+          color: $textColor;
+          text-transform: uppercase;
+        }
+        span{
+          font-weight: 800;
+          color: $textColor;
+        }
+      }
+      .lsp-block-cart-item{
+        margin: 0 0 10px 0;
+        padding-top: 10px;
+        font-weight: 400;
+        border-bottom: solid 2px $grayColor;
+        border-left: solid 2px $grayColor;
+        .lsp-block-cart-item-name{
+          font-weight: 400;
+        }
+        .lsp-block-cart-item-row-subname{
+          margin-top: 15px;
+
+          .lsp-block-cart-item-amount-c-count,
+          .lap-block-cart-item-amount-c-type,
+          .lsp-block-cart-item-price-c em{
+            color: $mainColor;
+          }
+        }
+      }
+      .lsp-info-message-bottom{
+        border-left: solid 2px $mainColor;
+        padding-left: 0;
+        margin-left: 0;
+        margin-bottom: 15px;
+        .jstore-cart-total,
+        & span{
+          color: $textColor;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+  #lsp-block-recommendation {
+    text-align: center;
+    border-left: 2px solid $mainColor;
+    .lsp-title{
+      font-style: normal;
+      background-color: $lessGrayColor;
+      margin: 10px 0 0 0;
+      padding: 13px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+    .lsp-js-recommendation-items{
+      background-color: $lessGrayColor;
+      .lsp-block-item{
+        border: 0;
+        background-color: $lessGrayColor;
+      }
+    }
+  }
+  .nav-menu,
+  .lsp-block-recommendation-wrapper,
+  .lsp-block-cart-wrapper{
+    margin-top: 10px;
+    position: relative;
+  }
+  .menu-more,
+  .recommendation-more,
+  .cart-more,
+  .cart-to-order{
+    display: none;
+    position: absolute;
+    height: 46px;
+    top: 0;
+    right: 0;
+    color: $textColor;
+    z-index: 3;
+    background-color: $btnColor;
+    padding: 12px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+  .cart-more{
+    right: 130px;
+  }
+}
+
+// nav-button-accordeon
+
+#show-nav {
+  display: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  background-color: $transparent;
+  border: 1px solid $mainColor;
+}
+#show-nav:before,
+#show-nav:after{
+  content: '';
+  width: 14px;
+  height: 3px;
+  background-color: $mainColor;
+  position: absolute;
+  top: 21px;
+  transition: all 0.3s ease 0s;
+}
+
+#show-nav:before{
+  transform: rotate(40deg);
+  left: 10px;
+}
+#show-nav:after{
+  transform: rotate(-40deg);
+  left: 19px;
+}
+
+#show-nav.active:before,
+#show-nav.active:after{
+  background-color: $mainColor;
+}
+
+#show-nav.active:before{
+  transform: rotate(-40deg);
+}
+
+#show-nav.active:after{
+  transform: rotate(40deg);
+}
+
+.show-nav:hover {
+  background-color: $whiteColor;
+  cursor: pointer;
+}
+
+.open {
+  display: block !important;
+}
+
+//end accordeon
+
+
+#jstore-css .content-left-side .lsp-block-item{
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction:column;
+  margin: 0 0 10px 0;
+  width: 100%;
+  height: auto;
+
+}
+//  Content
+
+.content-right-side{
+  flex: 1 1 auto;
+  width: 100%;
+  padding: 0 0 0 10px;
+  order: 2;
+}
+
+//  Navigation
+
+.nav-menu{
+  width: 100%;
+}
+
+a.all-menu{
+  //width: 100%;
+  width: 100%;
+  background-color: $lessGrayColor;
+  font-family: $mainFont;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 10px;
+  color: $textColor;
+
+  border-left: 2px solid $mainColor;
+}
+
+#lsp-block-tree{
+  margin: 0 0 15px 0;
+}
+
+#lsp-block-tree li{
+  margin: 0;
+  padding: 0;
+  a{
+    border-left: 2px solid $lessGrayColor;
+    padding: 5px 0 5px 15px;
+  }
+}
+#lsp-block-tree li a:hover{
+  border-color: $mainColor;
+}
+
+#jstore-css .nav-menu a.all-menu:hover{
+  color: $hoverColor;
+}
+
+// Items list
+
+// Фильтр
+
+#jstore-css #lsp-block-content .jstore-tag.lsp-block-tags-filter{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 0 0 10px;
+}
+#jstore-css #lsp-block-content .jstore-tag.lsp-block-tags-filter .lsp-block-tags-filter-item{
+  flex: 0 0 auto;
+  width: 150px;
+}
+// Товары
+#lsp-block-content .lsp-js-block-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+}
+
+#jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
+  float: none;
+  border: 0;
+  border-radius: 5%;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction:column;
+  width: calc(33.33% - 1rem);
+  height: auto;
+  margin: .5rem;
+  padding: 1rem;
+  text-align: center;
+  transition: 1s;
+
+
+  .lsp-block-item-image{
+    order: 1;
+    align-self: center;
+    width: 100%;
+    .lsp-block-item-image-link{
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      img{
+        border-radius: 5% 5% 0 0;
+        object-fit: cover;
+        max-width: none;
+        width: 100%;
+        min-height: 240px;
+      }
+    }
+
+  }
+  .lsp-block-item-name{
+    order: 2;
+    height: auto;
+    text-transform: uppercase;
+    a{
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 2.11;
+      letter-spacing: 0.36px;
+      text-decoration: none;
+    }
+  }
+  .lsp-block-item-description{
+    order: 4;
+    padding-bottom: 15px;
+    height: auto;
+    flex-grow: 1;
+    margin: auto 0 15px 0;
+    max-height: 90px;
+    word-wrap: break-word;
+    line-height: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    position: relative;
+
+    p{
+      padding-top: 15px;
+    }
+  }
+  .lsp-block-item-price{
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 135px;
+    order: 3;
+    .lsp-block-item-measurement{
+      padding-left: 3px;
+      font-size: 18px;
+    }
+  }
+  .lsp-block-item-add-to-cart{
+    order: 5;
+    position: absolute;
+    bottom: 6px;
+    align-self: flex-end;
+    width: auto;
+  }
+}

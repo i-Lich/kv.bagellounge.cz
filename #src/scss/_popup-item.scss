@@ -1,0 +1,23 @@
+#lsp-block-popup .lsp-block-items-popup{
+  box-shadow: inset 3px 0 0 0 $mainColor;
+  .lsp-popup-energy-cont{
+    border-top: 2px solid $grayColor;
+  }
+  .lsp-type-modifer-group-items-c{
+    .lsp-type-modifier-item{
+      span{
+        border-left: 2px solid transparent;
+      }
+      &:hover span {
+        background: $grayColor;
+        border-left: 2px solid $mainColor;
+      }
+      .lsp-button-red:hover{
+        background: $mainColor;
+      }
+    }
+    .lsp-popup-count{
+      font-size: 14px;
+    }
+  }
+}

@@ -202,7 +202,7 @@ function cb() {
     
 function watchFiles(){
     gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.css], cssDev);
+    gulp.watch([path.watch.scss], cssDev);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.images], images);
 }
