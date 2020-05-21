@@ -12,7 +12,7 @@ let path ={
     },
     src:{
         html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*.html" ],
-        css: sourceFolder + "/scss/style.scss",
+        css: sourceFolder + "/scss/mystyle.scss",
         js: sourceFolder + "/js/script.js",
         images: sourceFolder + "/images/**/*.+(png|jpg|gif|ico|svg|webp)",
         fonts: sourceFolder + "/fonts/*.ttf"
@@ -199,10 +199,10 @@ function cb() {
 }
 
 
-    
+
 function watchFiles(){
     gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.scss], cssDev);
+    gulp.watch([path.watch.css], cssDev);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.images], images);
 }
