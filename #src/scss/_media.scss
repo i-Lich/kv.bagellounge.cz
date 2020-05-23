@@ -1,19 +1,22 @@
 /* Large desktops and laptops */
 @media (max-width: 1200px) {
-  #jstore-css .container{
-    max-width: 1170px;
-  }
+
   #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
-    flex: 0 1 30%
+    width: calc(50% - 1rem);
   }
 }
-
-@media (max-width: 992px) {
-  #jstore-css .container{
-    max-width: 970px;
+@media (max-width: 1000px) {
+  #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-name a{
+    font-size: 16px;
+    line-height: 1;
   }
+}
+@media (max-width: 992px) {
+
   #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
-    flex: 0 1 47%
+    .lsp-block-item-name{
+      width: 50%;
+    }
   }
   #lsp-block-popup .lsp-popup-cont {
     width: 764px;
@@ -92,7 +95,7 @@
 }
 
 @media (max-width: 610px) {
-  #jstore-css .container {
+  #jstore-css {
     flex-direction: column;
   }
   #jstore-css .content-left-side{
@@ -107,7 +110,7 @@
     .recommendation-more,
     .cart-more,
     .cart-to-order{
-      display: block;
+      display: flex;
     }
   }
   #jstore-css .content-right-side{

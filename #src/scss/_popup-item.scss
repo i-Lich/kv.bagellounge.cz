@@ -1,5 +1,13 @@
 #lsp-block-popup .lsp-block-items-popup{
   box-shadow: inset 3px 0 0 0 $mainColor;
+  .lsp-popup-item-image{
+    img{
+      object-fit: cover;
+      max-width: none;
+      width: 100%;
+      min-height: 300px;
+    }
+  }
   .lsp-popup-energy-cont{
     border-top: 2px solid $grayColor;
   }

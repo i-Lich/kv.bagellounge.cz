@@ -145,7 +145,9 @@
       background-color: $lessGrayColor;
       margin: 10px 0 0 0;
       padding: 13px;
-      line-height: 20px;
+      text-align: left;
+      font-size: 16px !important;
+      line-height: 1.3;
       text-transform: uppercase;
     }
     .lsp-js-recommendation-items{
@@ -153,6 +155,11 @@
       .lsp-block-item{
         border: 0;
         background-color: $lessGrayColor;
+        .lsp-block-item-image-link{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }
@@ -168,7 +175,9 @@
   .cart-to-order{
     display: none;
     position: absolute;
-    height: 46px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
     top: 0;
     right: 0;
     color: $textColor;
@@ -282,13 +291,20 @@ a.all-menu{
   border-left: 2px solid $mainColor;
 }
 
-#lsp-block-tree{
+#jstore-css .content-left-side #lsp-block-tree{
   margin: 0 0 15px 0;
+  background: $lessGrayColor;
+  ul{
+    min-height: 0;
+  }
 }
 
 #lsp-block-tree li{
   margin: 0;
   padding: 0;
+  &:before{
+    content: '';
+  }
   a{
     border-left: 2px solid $lessGrayColor;
     padding: 5px 0 5px 15px;
@@ -329,15 +345,29 @@ a.all-menu{
   border-radius: 5%;
   display: flex;
   flex: 0 1 auto;
-  flex-direction:column;
-  width: calc(33.33% - 1rem);
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: calc(33.33% - 2rem);
   height: auto;
-  margin: .5rem;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0 0 2rem 0;
   text-align: center;
-  transition: 1s;
+  //transition: 1s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #404040;
+  transition: all 3s ease;
+  //background: url(https://kv.bagellounge.cz/wp-content/themes/images/article-links/bg.jpg);
 
+  &:hover {
 
+    background: url(https://kv.bagellounge.cz/wp-content/themes/images/article-links/bg.jpg);
+    opacity: 1;
+
+    .lsp-block-item-price span{
+      color: $whiteColor;
+    }
+  }
   .lsp-block-item-image{
     order: 1;
     align-self: center;
@@ -359,31 +389,45 @@ a.all-menu{
   }
   .lsp-block-item-name{
     order: 2;
+    max-width: 60%;
     height: auto;
     text-transform: uppercase;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-grow: 1;
+    margin: 0 0 0 1rem;
+    padding: 0;
+    text-align: left;
     a{
+      font-family: $secondFont;
+      padding-right: 10px;
       font-size: 18px;
       font-weight: 300;
-      line-height: 2.11;
+      line-height: 1.3;
       letter-spacing: 0.36px;
       text-decoration: none;
     }
   }
   .lsp-block-item-description{
+    width: 100%;
     order: 4;
-    padding-bottom: 15px;
+    margin: 5px 1rem 5px 1rem;
     height: auto;
     flex-grow: 1;
-    margin: auto 0 15px 0;
+    text-align: justify;
+    font-family: $textFont;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
     max-height: 90px;
     word-wrap: break-word;
-    line-height: 15px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     position: relative;
-
     p{
       padding-top: 15px;
     }
@@ -391,21 +435,32 @@ a.all-menu{
   .lsp-block-item-price{
     position: static;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    min-height: 37px;
+    margin: 0 1rem 0 0;
+    margin-left: auto;
     align-items: center;
-    padding-right: 135px;
+    font-family: $secondFont;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 2.11;
     order: 3;
+    span,
     .lsp-block-item-measurement{
-      padding-left: 3px;
+      font-family: $secondFont;
       font-size: 18px;
+      font-weight: 800;
+      line-height: 2.11;
+      padding-left: 3px;
     }
   }
   .lsp-block-item-add-to-cart{
     order: 5;
     position: absolute;
-    bottom: 6px;
-    align-self: flex-end;
-    width: auto;
-    color: green;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 11px 11px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 }

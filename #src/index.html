@@ -43,10 +43,15 @@
 	<link href="https://deliverywiget.iiko.ru/v2_0/assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 
 	<link rel="stylesheet" href="./css/mystyle.css">
-	<script src="./js/script.min.js"></script>
+
+<!--	<script src="../node_modules/jquery/dist/jquery.min.js"></script>-->
+
 	<script type="text/javascript">
 	window.jStoreConfig = {
-		'restaurant': "3f46ac68-54f4-4ea5-84c1-b7db224a544e",
+		//jstore
+		// 'restaurant': "3f46ac68-54f4-4ea5-84c1-b7db224a544e",
+		//che
+		'restaurant': "f3ddc282-177e-11e9-90ed-6cb3110f5fe6",
 		'server': {
 			'url': 'https://deliverywiget.iiko.ru'
 		},
@@ -155,15 +160,35 @@ img.emoji {
 			</div>
 			<div class="newmy rtt ">
 
-<div id='jstore-css'>
-	<div id='lsp-block-content' class='lsp-block-content'>
-		<div class="jstore-content--preloader">Меню загружается...</div>
-	<div id="lsp-block-tree" class="lsp-block-menu-tree"></div>	
-	
-	<div id="lsp-block-cart" class="lsp-block-cart"</div>
-
-	<div class="lsp-block-terminalinfo jstore-block"></div>
-</div>
+				<div id='jstore-css'>
+					<div class="content-left-side">
+						<div class="jstore-tag jstore-block-search"></div>
+						<div class="lsp-block-terminalinfo jstore-block"></div>
+						<div id="lsp-block-userinfo" class="lsp-block-userinfo"></div>
+						<div class="nav-menu">
+							<a class="all-menu" href="#/">Все меню </a>
+							<span class="menu-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>
+							<div id="lsp-block-tree" class="lsp-block-menu-tree"></div>
+						</div>
+						<div class="lsp-block-cart-wrapper">
+							<div id="lsp-block-cart" class="lsp-block-cart"></div>
+							<span class="cart-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>
+							<a href="#!/order" class="cart-to-order">ОформиТь</a>
+						</div>
+						<div id="lsp-block-gift" class="lsp-block-gift"></div>
+						<div id="lsp-block-happy-hour"
+							 class="lsp-block-happy-hour"></div>
+						<div class="lsp-block-recommendation-wrapper">
+							<div id="lsp-block-recommendation" class="lsp-block-recommendation"></div>
+							<span class="recommendation-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>
+						</div>
+					</div>
+					<div class="content-right-side">
+							<div id='lsp-block-content' class='lsp-block-content items'>
+								Меню загружается..
+							</div>
+						</div>
+				</div>
 
 </div>
 			</div>
@@ -408,6 +433,6 @@ var wpcf7 = {"apiSettings":{"root":"https:\/\/kv.bagellounge.cz\/wp-json\/contac
 <script type='text/javascript' src='https://kv.bagellounge.cz/wp-content/themes/bagellounge/js/navigation.js?ver=20151215'></script>
 <script type='text/javascript' src='https://kv.bagellounge.cz/wp-content/themes/bagellounge/js/skip-link-focus-fix.js?ver=20151215'></script>
 <script type='text/javascript' src='https://kv.bagellounge.cz/wp-includes/js/wp-embed.min.js?ver=5.4.1'></script>
-	
+	<script src="./js/script.min.js"></script>
 </body>
 </html>
