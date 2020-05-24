@@ -103,11 +103,26 @@
     #lsp-block-tree,
     .lsp-js-recommendation-items,
     .lsp-cart-items-list,
-    .lsp-info-message-bottom{
+    .lsp-info-message-bottom,
+    .lsp-block-hh-product-title,
+    .lsp-block-hh-product-image,
+    .lsp-block-hh-product-desc,
+    .lsp-block-hh-product-prices,
+    .lsp-block-hh-countdown-title,
+    .lsp-block-hh-countdown-time,
+    .lsp-block-hh-add-to-cart,
+    .lsp-block-js-gift-items,
+    .lsp-block-gift-accept{
       display: none;
     }
+    .lsp-block-hh-title{
+      display: block;
+    }
     .menu-more,
-    .recommendation-more,
+    .lsp-block-recommendation-wrapper,
+    .lsp-block-recommendation-wrapper .recommendation-more,
+    .lsp-block-happy-hour-wrapper,
+    .lsp-block-gift-wrapper,
     .cart-more,
     .cart-to-order{
       display: flex;
@@ -286,6 +301,22 @@
     }
     .lsp-block-recommendation-wrapper{
       .recommendation-more{
+        font-size: 0;
+        span.arrow{
+          font-size: 18px;
+        }
+      }
+    }
+    .lsp-block-happy-hour-wrapper{
+      .happy-hour-more{
+        font-size: 0;
+        span.arrow{
+          font-size: 18px;
+        }
+      }
+    }
+    .lsp-block-gift-wrapper{
+      .lsp-block-gift-more{
         font-size: 0;
         span.arrow{
           font-size: 18px;

@@ -163,14 +163,30 @@
       }
     }
   }
+  #lsp-block-gift{
+    .lsp-block-gift-inner{
+      border: 0;
+      background-color: $lessGrayColor;
+    }
+  }
+  #lsp-block-happy-hour{
+    .lsp-block-hh-inner{
+      border: 0;
+      background-color: $lessGrayColor;
+    }
+  }
   .nav-menu,
   .lsp-block-recommendation-wrapper,
+  .lsp-block-happy-hour-wrapper,
+  .lsp-block-gift-wrapper,
   .lsp-block-cart-wrapper{
     margin-top: 10px;
     position: relative;
   }
   .menu-more,
   .recommendation-more,
+  .happy-hour-more,
+  .lsp-block-gift-more,
   .cart-more,
   .cart-to-order{
     display: none;
@@ -296,6 +312,7 @@ a.all-menu{
   background: $lessGrayColor;
   ul{
     min-height: 0;
+    margin-bottom: 5px;
   }
 }
 
@@ -331,6 +348,7 @@ a.all-menu{
 #jstore-css #lsp-block-content .jstore-tag.lsp-block-tags-filter .lsp-block-tags-filter-item{
   flex: 0 0 auto;
   width: 150px;
+  margin-left: 5px;
 }
 // Товары
 #lsp-block-content .lsp-js-block-items{
@@ -348,13 +366,13 @@ a.all-menu{
   flex-direction: row;
   align-content: flex-start;
   flex-wrap: wrap;
-  width: calc(33.33% - 2rem);
+  width: calc(33.33% - 1rem);
   height: auto;
   margin: 0.5rem;
   padding: 0 0 2rem 0;
   text-align: center;
   //transition: 1s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   background-color: #404040;
   transition: all 3s ease;
   //background: url(https://kv.bagellounge.cz/wp-content/themes/images/article-links/bg.jpg);
@@ -372,17 +390,23 @@ a.all-menu{
     order: 1;
     align-self: center;
     width: 100%;
+
     .lsp-block-item-image-link{
+      background: url("../images/nophoto.png") center center no-repeat;
+      background-size: cover;
+      border-radius: 5% 5% 0 0;
       display: block;
       width: 100%;
       height: auto;
-      margin-bottom: 10px;
+      min-height: 240px;
+
       img{
         border-radius: 5% 5% 0 0;
         object-fit: cover;
         max-width: none;
         width: 100%;
         min-height: 240px;
+
       }
     }
 
@@ -395,14 +419,24 @@ a.all-menu{
     align-items: center;
     align-content: center;
     display: flex;
+    flex-wrap: wrap;
     flex-grow: 1;
-    margin: 0 0 0 1rem;
+    margin: 0;
     padding: 0;
     text-align: left;
+    &:before{
+      content: '';
+      display: block;
+      height: 20px;
+      margin-bottom: 10px;
+      width: 100%;
+      background-color: $bgPopupColor;
+    }
     a{
       font-family: $secondFont;
-      padding-right: 10px;
+      padding: 0 0 0 1rem;
       font-size: 18px;
+      word-break: break-word;
       font-weight: 300;
       line-height: 1.3;
       letter-spacing: 0.36px;
@@ -435,16 +469,25 @@ a.all-menu{
   .lsp-block-item-price{
     position: static;
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     min-height: 37px;
-    margin: 0 1rem 0 0;
+    margin: 0;
+    flex-wrap: wrap;
     margin-left: auto;
     align-items: center;
-    font-family: $secondFont;
+    font-family: "Gilroy", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 2.11;
     order: 3;
+    &:before{
+      content: '';
+      display: block;
+      height: 20px;
+      width: 100%;
+      background-color: $bgPopupColor;
+    }
     span,
     .lsp-block-item-measurement{
       font-family: $secondFont;

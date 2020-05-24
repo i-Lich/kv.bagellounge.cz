@@ -394,3 +394,8 @@ template {
 #jstore-css{
   display: flex;
 }
+#jstore-css .lsp-block-content--preloader{
+  font-size: 40px;
+  color: $whiteColor;
+  padding-top: 10px;
+}

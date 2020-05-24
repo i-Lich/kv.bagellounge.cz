@@ -35,6 +35,20 @@ $(function(){
     $(".recommendation-more").click(function () {
         $('.lsp-js-recommendation-items').toggleClass('open');
     });
+    $(".happy-hour-more").click(function () {
+        $('.lsp-block-hh-product-title').toggleClass('open');
+        $('.lsp-block-hh-product-image').toggleClass('open');
+        $('.lsp-block-hh-product-desc').toggleClass('open');
+        $('.lsp-block-hh-product-prices').toggleClass('open');
+        $('.lsp-block-hh-countdown-title').toggleClass('open');
+        $('.lsp-block-hh-countdown-time').toggleClass('open');
+        $('.lsp-block-hh-add-to-cart').toggleClass('open');
+        $('.lsp-block-hh-inner').toggleClass('open');
+    });
+    $(".lsp-block-gift-more").click(function () {
+        $('.lsp-block-js-gift-items').toggleClass('open');
+        $('.lsp-block-gift-accept').toggleClass('open');
+    });
     $(".cart-more").click(function () {
         $('.lsp-cart-items-list').toggleClass('open');
         $('.lsp-info-message-bottom').toggleClass('open');

@@ -1,6 +1,8 @@
 #lsp-block-popup .lsp-block-items-popup{
   box-shadow: inset 3px 0 0 0 $mainColor;
   .lsp-popup-item-image{
+    background: url("../images/nophoto.png") center center no-repeat;
+    background-size: cover;
     img{
       object-fit: cover;
       max-width: none;
@@ -12,6 +14,7 @@
     border-top: 2px solid $grayColor;
   }
   .lsp-type-modifer-group-items-c{
+
     .lsp-type-modifier-item{
       span{
         border-left: 2px solid transparent;
