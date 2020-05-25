@@ -1,6 +1,7 @@
 #lsp-block-popup .lsp-block-items-popup{
   box-shadow: inset 3px 0 0 0 $mainColor;
   .lsp-popup-item-image{
+    display: block;
     background: url("../images/nophoto.png") center center no-repeat;
     background-size: cover;
     img{
@@ -30,5 +31,11 @@
     .lsp-popup-count{
       font-size: 14px;
     }
+  }
+  .lsp-js-popup-close{
+    background-size: contain;
+    background-image: url(../images/close.png);
+    width: 27px;
+    height: 27px;
   }
 }
