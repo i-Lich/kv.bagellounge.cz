@@ -371,6 +371,12 @@ template {
   user-select: none;
 }
 
+a[href^="#!/order"] {
+  display: none;
+  background: red;
+}
+
+
 ////ibg
 //
 //.lsp-block-item-image-link{

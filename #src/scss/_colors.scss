@@ -256,7 +256,7 @@
 }
 #lsp-block-datetimepicker.xdsoft_datetimepicker {
   box-shadow: 0 5px 15px -5px $moreGrayColor;
-  background: $whiteColor;
+  background: $grayColor;
   border-bottom-color: $moreGrayColor;
   border-left-color: $grayColor;
   border-right-color: $grayColor;
@@ -281,11 +281,11 @@
   color: $moreGrayColor;
 }
 #lsp-block-datetimepicker.xdsoft_datetimepicker .xdsoft_label {
-  background-color: $whiteColor;
+  background-color: $moreGrayColor;
 }
 #lsp-block-datetimepicker.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
   border-color: $grayColor;
-  background: $whiteColor;
+  background: $moreGrayColor;
 }
 #lsp-block-datetimepicker.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
   color: $whiteColor;

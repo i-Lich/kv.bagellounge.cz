@@ -112,6 +112,7 @@ $(function() {
         $('#lsp-block-userinfo').removeClass('open');
         $('.dropdown-cart').toggleClass('open');
         cartHeight();
+
     });
 
     window.onresize = function resizeCartBlock() {
@@ -119,11 +120,29 @@ $(function() {
             cartHeight();
         }
     };
+    //scroll к контенту при клике на кнопку "оформить заказ"
+
+    window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
+    jStoreEvents.push(['ready', null, function (data) {
+        $("a[href^=\"#!/order\"]").click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#lsp-block-content").offset().top
+            }, 1000);
+        });
+    }]);
+
+});
+
+$(function(){
+    $("a[href^=\"#!/order\"]").click(function() {
+        alert('asdasdasd')
+    });
 });
 
 window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
 jStoreEvents.push(['pageChanged', null, function (data) {
     $('.jstore-block-search').removeClass('open');
+    $('.show-menu-burger').removeClass('active');
     $('.lsp-block-terminalinfo').removeClass('open');
     $('#lsp-block-userinfo').removeClass('open');
     $('#lsp-block-tree--header').removeClass('open');
@@ -134,4 +153,5 @@ jStoreEvents.push(['pageChanged', null, function (data) {
     $('#lsp-block-happy-hour').removeClass('open');
     $('#lsp-block-recommendation').removeClass('open');
 }]);
+
 

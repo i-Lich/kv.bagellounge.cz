@@ -24,11 +24,15 @@
     }
     .dropdown-menu-burger-content{
       position: relative;
+      width: 0;
+      a.all-menu{
+        display: none;
+      }
       #lsp-block-tree--header {
         display: none;
         background-color: $lessGrayColor;
         top: 64px;
-        left: -42px;
+        left: 0;
         //margin: 0;
         //list-style: none;
         //padding-left: 10px;
@@ -244,26 +248,35 @@
       height: 46px;
       margin-bottom: 10px;
       .jstore-block-search-inner{
+        height: 100%;
         padding: 1px 10px 0 10px;
-        .lsp-block-userinfo-appeal{
-          display: none;
-        }
-        .label-row-field-search{
-          input{
-            padding-right: 16%;
-          }
-        }
-        .lsp-block-search-order-button-cont{
-          position: absolute;
-          top: 0;
-          right: 0;
-          margin: 0;
+        .jstore-js-search-form{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
           height: 100%;
-          input{
-            height: 100%;
-            border-radius: 0;
+          .lsp-block-userinfo-appeal{
+            display: none;
+          }
+          .label-row {
+            flex: 1 1 auto;
+            margin: 0;
+            .label-row-field-search {
+              input {
+                padding-right: 16%;
+              }
+            }
+          }
+          .lsp-block-search-order-button-cont{
+
+            input{
+              height: 100%;
+              border-radius: 0;
+            }
           }
         }
+        }
+
       }
     }
   }
@@ -341,7 +354,7 @@
       }
     }
   }
-}
+
 
 @media (max-width: 580px) {
   #jstore-css .content-left-side .cart-more{
