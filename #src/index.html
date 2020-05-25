@@ -40,8 +40,8 @@
 </script>
 
 <!-- delivery -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
 	<link href="https://deliverywiget.iiko.ru/v2_0/assets/css/style.css" rel="stylesheet" type="text/css" media="screen" />
-
 	<link rel="stylesheet" href="./css/mystyle.css">
 
 <!--	<script src="../node_modules/jquery/dist/jquery.min.js"></script>-->
@@ -161,6 +161,41 @@ img.emoji {
 			<div class="newmy rtt ">
 
 				<div id='jstore-css'>
+					<div class="jstore-header-fixed">
+						<div class="jstore-header-wrap">
+							<div class="show-menu-burger">
+								<span></span>
+							</div>
+							<div class="dropdown-menu-burger-content">
+								<a class="all-menu" href="#/">All menu</a>
+								<div id="lsp-block-tree--header" class="lsp-block-menu-tree jstore-header-menu"></div>
+
+							</div>
+
+							<a class="logo" href="../home-cz/index.html">
+								<img src="images/header-logo.png">
+							</a>
+							<ul class="jstore-header-fixed-dropdown">
+								<li class="fixed-search">
+									<div class="icon-search"><i class="fas fa-search" aria-hidden="true"></i></div>
+									<div class="jstore-tag jstore-block-search"></div>
+								</li>
+								<li class="fixed-signin">
+									<div class="icon-signin"><i class="fa fa-user" aria-hidden="true"></i></div>
+									<div id="lsp-block-userinfo" class="lsp-block-userinfo"></div>
+								</li>
+								<li class="fixed-cart">
+									<div class="icon-cart"><i class="fas fa-shopping-cart" aria-hidden="true"></i></div>
+									<div id="lsp-block-cart--header" class="lsp-block-cart dropdown-cart"></div>
+								</li>
+								<li class="amount-goods">
+									<div id="cart-fixed" class="lsp-block-cart" data-page="cart">
+										<span class="jstore-tag lsp-block-cart-total jstore-js-cart-total-count" >0</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
 					<div class="content-left-side">
 						<div class="jstore-tag jstore-block-search"></div>
 						<div class="lsp-block-terminalinfo jstore-block"></div>
@@ -175,19 +210,19 @@ img.emoji {
 							<span class="cart-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>
 							<a href="#!/order" class="cart-to-order">ОформиТь</a>
 						</div>
-						<div class="lsp-block-gift-wrapper">
-							<div id="lsp-block-gift" class="lsp-block-gift"></div>
-							<span class="lsp-block-gift-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>
-						</div>
-						<div class="lsp-block-happy-hour-wrapper">
-							<div id="lsp-block-happy-hour"
-								 class="lsp-block-happy-hour"></div>
-							<span class="happy-hour-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>
-						</div>
-						<div class="lsp-block-recommendation-wrapper">
-							<div id="lsp-block-recommendation" class="lsp-block-recommendation"></div>
-							<span class="recommendation-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>
-						</div>
+<!--						<div class="lsp-block-gift-wrapper">-->
+<!--							<div id="lsp-block-gift" class="lsp-block-gift"></div>-->
+<!--							<span class="lsp-block-gift-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>-->
+<!--						</div>-->
+<!--						<div class="lsp-block-happy-hour-wrapper">-->
+<!--							<div id="lsp-block-happy-hour"-->
+<!--								 class="lsp-block-happy-hour"></div>-->
+<!--							<span class="happy-hour-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>-->
+<!--						</div>-->
+<!--						<div class="lsp-block-recommendation-wrapper">-->
+<!--							<div id="lsp-block-recommendation" class="lsp-block-recommendation"></div>-->
+<!--							<span class="recommendation-more">ПОСМОТРЕТЬ <span class="arrow">▼</span></span>-->
+<!--						</div>-->
 					</div>
 					<div class="content-right-side">
 							<div id='lsp-block-content' class='lsp-block-content items'>

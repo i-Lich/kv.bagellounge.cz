@@ -12,6 +12,46 @@
   }
 }
 @media (max-width: 992px) {
+  .jstore-header-fixed {
+    .show-menu-burger{
+      display: block;
+      float: left;
+      &:before,
+      span,
+      &:after{
+        opacity: 1;
+      }
+    }
+    .dropdown-menu-burger-content{
+      position: relative;
+      #lsp-block-tree--header {
+        display: none;
+        background-color: $lessGrayColor;
+        top: 64px;
+        left: -42px;
+        //margin: 0;
+        //list-style: none;
+        //padding-left: 10px;
+        position: relative;
+        //left: .5rem;
+        //z-index: 5;
+        //background-color: $mainColor;
+        .lsp-js-menu-childs{
+          left: 100%;
+          top: 0;
+
+        }
+      }
+    }
+
+  }
+
+
+
+
+  .jstore-header-fixed ul.jstore-header-menu li{
+    float: none;
+  }
 
   #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
     .lsp-block-item-name{
@@ -95,8 +135,22 @@
 }
 
 @media (max-width: 610px) {
+  .jstore-header-fixed .show-menu-burger{
+    margin-right: 10px;
+  }
+  .jstore-header-fixed a.logo{
+    display: none;
+  }
+
   #jstore-css {
     flex-direction: column;
+    #lsp-block-tree--header{
+      .lsp-js-menu-childs{
+        width: 100%;
+        word-break: break-word;
+        margin: 0;
+      }
+    }
   }
   #jstore-css .content-left-side{
     flex: 0 0 auto;
@@ -119,13 +173,31 @@
       display: block;
     }
     .menu-more,
-    .lsp-block-recommendation-wrapper,
-    .lsp-block-recommendation-wrapper .recommendation-more,
-    .lsp-block-happy-hour-wrapper,
-    .lsp-block-gift-wrapper,
+    .recommendation-more,
+    .happy-hour-more,
+    .lsp-block-gift-more,
     .cart-more,
     .cart-to-order{
       display: flex;
+    }
+    #lsp-block-tree{
+      .lsp-js-menu-childs{
+        width: 100%;
+        word-break: break-all;
+        margin: 0;
+        li{
+          a{
+            font-size: 18px;
+          }
+          ul{
+            li{
+              a{
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
     }
   }
   #jstore-css .content-right-side{
@@ -133,7 +205,10 @@
     margin: 20px 0 0 0;
   }
   #lsp-block-popup .lsp-popup-cont {
-    width: 100%;
+    transform: translateY(40px);
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
     padding: 10px;
   }
   #lsp-block-items-popup .lsp-modifer-group-items,
@@ -219,7 +294,10 @@
       display: none;
       li{
         text-align: center;
+        text-transform: uppercase;
         a{
+          font-size: 24px;
+          padding: 0;
           width: 100%;
         }
         ul{

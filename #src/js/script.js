@@ -50,19 +50,85 @@ $(function(){
         $('.lsp-block-gift-accept').toggleClass('open');
     });
     $(".cart-more").click(function () {
-        $('.lsp-cart-items-list').toggleClass('open');
-        $('.lsp-info-message-bottom').toggleClass('open');
+        $('#lsp-block-cart .lsp-cart-items-list').toggleClass('open');
+        $('#lsp-block-cart .lsp-info-message-bottom').toggleClass('open');
     });
+});
+
+$(function() {
+    // window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
+    // jStoreEvents.push(['pageChanged', null, function (data) {
+    //     $('.show-menu-burger').removeClass('active');
+    //     $('.jstore-block-search').removeClass('open');
+    //     $('#lsp-block-userinfo').removeClass('open');
+    //     $('.dropdown-cart').removeClass('open');
+    // }]);
+
+    $(".show-menu-burger").click(function () {
+        $('.jstore-block-search').removeClass('open');
+        $('#lsp-block-userinfo').removeClass('open');
+        $('.dropdown-cart').removeClass('open');
+        $('.jstore-header-menu').toggleClass('open');
+        $('.show-menu-burger').toggleClass('active');
+    });
+
+    $(".icon-search").click(function () {
+        $('.jstore-header-menu').removeClass('open');
+        $('.show-menu-burger').removeClass('active');
+        $('#lsp-block-userinfo').removeClass('open');
+        $('.dropdown-cart').removeClass('open');
+        $('.jstore-block-search').toggleClass('open');
+    });
+
+    $(".icon-signin").click(function () {
+        $('.jstore-header-menu').removeClass('open');
+        $('.show-menu-burger').removeClass('active');
+        $('.jstore-block-search').removeClass('open');
+        $('.dropdown-cart').removeClass('open');
+        $('#lsp-block-userinfo').toggleClass('open');
+    });
+
+    function cartHeight(){
+        if(document.getElementById('lsp-block-cart--header').classList.contains('open')) {
+
+            let clientWindowHeight = document.documentElement.clientHeight;
+            let cartBlockTopPosition = document.getElementById('lsp-block-cart--header').getBoundingClientRect().top;
+            let contentHeight = document.querySelector('body').offsetHeight - cartBlockTopPosition;
+            let cartBlockHeight = document.getElementById('lsp-block-cart--header').offsetHeight + cartBlockTopPosition;
+            let maxCartBlockHeight = 0;
+            if (contentHeight > clientWindowHeight) {
+                maxCartBlockHeight =  clientWindowHeight - cartBlockTopPosition -15 ;
+            } else{
+                maxCartBlockHeight =  contentHeight -15;
+            }
+            document.getElementById('lsp-block-cart--header').style.maxHeight = maxCartBlockHeight + 'px';
+        }
+    }
+
+    $(".icon-cart").click(function () {
+        $('.jstore-header-menu').removeClass('open');
+        $('.show-menu-burger').removeClass('active');
+        $('.jstore-block-search').removeClass('open');
+        $('#lsp-block-userinfo').removeClass('open');
+        $('.dropdown-cart').toggleClass('open');
+        cartHeight();
+    });
+
+    window.onresize = function resizeCartBlock() {
+        if (document.getElementById('lsp-block-cart--header').classList.contains('open')) {
+            cartHeight();
+        }
+    };
 });
 
 window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
 jStoreEvents.push(['pageChanged', null, function (data) {
-    $('#show-nav').removeClass('active');
     $('.jstore-block-search').removeClass('open');
     $('.lsp-block-terminalinfo').removeClass('open');
     $('#lsp-block-userinfo').removeClass('open');
-    // $('.nav-menu').removeClass('open');
-    $('div.lsp-cart-items-list').removeClass('open');
+    $('#lsp-block-tree--header').removeClass('open');
+    $('#lsp-block-cart--header').removeClass('open');
+    $('.lsp-cart-items-list').removeClass('open');
     $('.lsp-info-message-bottom').removeClass('open');
     $('#lsp-block-gift').removeClass('open');
     $('#lsp-block-happy-hour').removeClass('open');
