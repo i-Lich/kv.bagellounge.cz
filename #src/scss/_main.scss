@@ -9,8 +9,8 @@
 .jstore-header-fixed .show-menu-burger{
   display: none;
   position: relative;
-  width: 30px;
-  height: 20px;
+  width: 26px;
+  height: 21px;
   margin: 0 10px;
   float: left;
 
@@ -22,7 +22,7 @@
   background-color: #fff;
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 3px;
   left: 0;
   transition: all .3s ease 0s;
 }
@@ -31,7 +31,7 @@
   background-color: #FFFFFF;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   top: 9px;
   transition: all .3s ease 0s;
   opacity: 0;
@@ -70,7 +70,7 @@
   padding: 0;
   right: 0;
   background: $lessGrayColor;
-  z-index: 1000;
+  z-index: 100;
 
   .jstore-header-wrap{
     max-width: 900px;
@@ -308,6 +308,9 @@
 .jstore-header-fixed .fixed-signin,
 .jstore-header-fixed .fixed-cart{
   position: relative;
+  div i{
+    font-size: 25px;
+  }
 }
 
 .jstore-header-fixed .fixed-search .jstore-block-search,
@@ -319,7 +322,7 @@
   overflow: auto;
   height: auto;
   right: 0;
-  top: 39px;
+  top: 34px;
   z-index: 2;
 }
 

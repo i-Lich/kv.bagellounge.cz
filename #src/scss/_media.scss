@@ -6,9 +6,20 @@
   }
 }
 @media (max-width: 1000px) {
-  #jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-name a{
-    font-size: 16px;
-    line-height: 1;
+
+  #jstore-css{
+    .jstore-header-fixed{
+      .jstore-header-wrap{
+        .jstore-header-fixed-dropdown{
+          font-size: 20px;
+        }
+      }
+    }
+    #lsp-block-content .lsp-js-block-items .lsp-block-item .lsp-block-item-name a{
+      font-size: 16px;
+      line-height: 1;
+    }
+
   }
 }
 @media (max-width: 992px) {
@@ -33,6 +44,7 @@
         background-color: $lessGrayColor;
         top: 64px;
         left: 0;
+        border: 1px solid $mainColor;
         //margin: 0;
         //list-style: none;
         //padding-left: 10px;
@@ -217,7 +229,7 @@
     margin: 20px 0 0 0;
   }
   #lsp-block-popup .lsp-popup-cont {
-    transform: translateY(40px);
+    transform: translateY(-10px);
     overflow: auto;
     width: 100vw;
     height: 100vh;

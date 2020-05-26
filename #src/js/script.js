@@ -133,11 +133,6 @@ $(function() {
 
 });
 
-$(function(){
-    $("a[href^=\"#!/order\"]").click(function() {
-        alert('asdasdasd')
-    });
-});
 
 window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
 jStoreEvents.push(['pageChanged', null, function (data) {
