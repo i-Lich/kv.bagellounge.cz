@@ -124,13 +124,15 @@ $(function() {
 
     window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
     jStoreEvents.push(['ready', null, function (data) {
-        $("a[href^=\"#!/order\"]").click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("#lsp-block-content").offset().top
-            }, 1000);
+        const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
+        buttonsToOrder.forEach(function(elem) {
+            elem.addEventListener("click", function() {
+                $([document.documentElement, document.body]).animate({
+                                scrollTop: $("#lsp-block-content").offset().top
+                            }, 1000);
+            });
         });
     }]);
-
 });
 
 
