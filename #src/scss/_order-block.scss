@@ -9,15 +9,23 @@
   .label-row-text-info{
     display: none;
   }
+  .lsp-js-form-field-userAgreement{
+    .label-row-field{
+      font-size: 16px;
+      input{
+        vertical-align: middle;
+      }
+      a{
+        font-size: 16px;
+      }
+    }
+  }
   input,
   textarea,
   select{
     border: 0;
     border-left: 2px solid $mainColor;
     background-color: $lessGrayColor;
-  }
-  input[type='radio']{
-    -webkit-appearance:radio;
   }
 }
 @media (max-width: 610px) {

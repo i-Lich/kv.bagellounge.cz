@@ -180,6 +180,10 @@ textarea {
   margin: 0; /* 2 */
 }
 
+#jstore-css input{
+  -webkit-appearance: auto;
+}
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -369,11 +373,6 @@ template {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-a[href^="#!/order"] {
-  display: none;
-  background: red;
 }
 
 
