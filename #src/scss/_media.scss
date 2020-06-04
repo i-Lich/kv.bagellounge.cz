@@ -11,12 +11,12 @@
     .jstore-header-fixed{
       .jstore-header-wrap{
         .dropdown-menu-burger-content{
-          display: flex;
+          display: none;
           justify-content: flex-start;
           align-items: center;
           flex-grow: 1;
           //overflow: visible;
-          position: absolute;
+          //position: absolute;
           top: -15px;
           left: 20px;
           width: 275px;
@@ -26,7 +26,7 @@
         }
         .jstore-header-fixed-dropdown{
           font-size: 20px;
-          overflow: auto;
+          //overflow: auto;
         }
       }
     }
@@ -429,11 +429,16 @@
 @media (max-width: 400px) {
   .jstore-header-fixed-dropdown{
     .fixed-search .jstore-block-search{
-      width: 200px;
+      width: 280px;
+      right: -110px;
     }
+
     #lsp-block-userinfo{
         width: auto;
     }
+  }
+  .jstore-header-fixed #lsp-block-cart--header{
+    right: -20px;
   }
 
   #jstore-css .content-left-side{
