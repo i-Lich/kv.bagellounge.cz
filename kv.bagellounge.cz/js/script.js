@@ -75,13 +75,13 @@ $(function() {
     function menuHeight(){
         let clientWindowHeight = document.documentElement.clientHeight;
         let menuBlockTopPosition = 50;
-        let contentHeight = document.querySelector('body').offsetHeight - menuBlockTopPosition;
+        let contentHeight = document.querySelector('body').offsetHeight - menuBlockTopPosition; //450
         let menuBlockHeight = document.querySelector('.dropdown-menu-burger-content--popup').offsetHeight + menuBlockTopPosition;
         let maxMenuBlockHeight = 0;
         if (contentHeight > clientWindowHeight) {
-            maxMenuBlockHeight =  menuBlockTopPosition - cartBlockTopPosition -15 ;
+            maxMenuBlockHeight =  clientWindowHeight - menuBlockTopPosition - 15 ;
         } else{
-            maxMenuBlockHeight =  contentHeight -15;
+            maxMenuBlockHeight =  contentHeight - 15;
         }
         // maxMenuBlockHeight = 200;
         document.querySelector('.dropdown-menu-burger-content--popup').style.maxHeight = maxMenuBlockHeight + 'px';
@@ -133,7 +133,9 @@ $(function() {
         if (document.getElementById('lsp-block-cart--header').classList.contains('open')) {
             cartHeight();
         }
+        if ($('.dropdown-menu-burger-content--popup').hasClass('open-flex')) {
             menuHeight();
+        }
     };
     //scroll к контенту при клике на кнопку "оформить заказ"
 
