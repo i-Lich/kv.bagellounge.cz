@@ -98,12 +98,12 @@ $(function() {
     // }]);
 
     $(".show-menu-burger").click(function () {
+        alert('asd');
         menuHeight();
         $('.jstore-block-search').removeClass('open');
         $('#lsp-block-userinfo').removeClass('open');
         $('.dropdown-cart').removeClass('open');
         $('.dropdown-menu-burger-content--popup').toggleClass('open-flex');
-
         $('.show-menu-burger').toggleClass('active');
     });
 
