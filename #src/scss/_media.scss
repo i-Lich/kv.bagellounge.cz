@@ -241,6 +241,18 @@
   #jstore-css .content-right-side {
     padding: 0;
     margin: 20px 0 0 0;
+    #lsp-block-content{
+      .lsp-block-items{
+        .lsp-block-item{
+          .lsp-block-item-name{
+            padding: 10px 0 0 0;
+            &::before{
+              content: none;
+            }
+          }
+        }
+      }
+    }
   }
   #lsp-block-popup .lsp-popup-cont {
     transform: translateY(-10px);
