@@ -1,0 +1,1 @@
+(function(t,r,i,p){i=t.createElement(r);i.src="https://www.tripadvisor.ru/WidgetEmbed-cdsratingsonlynarrow?border=false&shadow=false&locationId=12607949&display_version=2%22&uniq=666&lang=ru";i.async=true;p=t.getElementsByTagName(r)[0];p.parentNode.insertBefore(i,p)})(document,"script");
