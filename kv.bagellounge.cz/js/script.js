@@ -73,7 +73,6 @@ $(function() {
         }
     }
     function menuHeight(){
-        // if(document.querySelector('.show-menu-burger').classList.contains('active')) {
         let clientWindowHeight = document.documentElement.clientHeight;
         let menuBlockTopPosition = 50;
         let contentHeight = document.querySelector('body').offsetHeight - menuBlockTopPosition;
@@ -89,22 +88,13 @@ $(function() {
         // }
     }
 
-    // window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
-    // jStoreEvents.push(['pageChanged', null, function (data) {
-    //     $('.show-menu-burger').removeClass('active');
-    //     $('.jstore-block-search').removeClass('open');
-    //     $('#lsp-block-userinfo').removeClass('open');
-    //     $('.dropdown-cart').removeClass('open');
-    // }]);
-
     $(".show-menu-burger").click(function () {
-        alert('asd');
-        menuHeight();
         $('.jstore-block-search').removeClass('open');
         $('#lsp-block-userinfo').removeClass('open');
         $('.dropdown-cart').removeClass('open');
         $('.dropdown-menu-burger-content--popup').toggleClass('open-flex');
         $('.show-menu-burger').toggleClass('active');
+        menuHeight();
     });
 
     $(".icon-search").click(function () {
@@ -139,10 +129,11 @@ $(function() {
 
     });
 
-    window.onresize = function resizeCartBlock() {
+    window.onresize = function resizeHeightBlocks() {
         if (document.getElementById('lsp-block-cart--header').classList.contains('open')) {
             cartHeight();
         }
+            menuHeight();
     };
     //scroll к контенту при клике на кнопку "оформить заказ"
 

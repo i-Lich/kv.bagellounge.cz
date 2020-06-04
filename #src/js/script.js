@@ -129,10 +129,11 @@ $(function() {
 
     });
 
-    window.onresize = function resizeCartBlock() {
+    window.onresize = function resizeHeightBlocks() {
         if (document.getElementById('lsp-block-cart--header').classList.contains('open')) {
             cartHeight();
         }
+            menuHeight();
     };
     //scroll к контенту при клике на кнопку "оформить заказ"
 
