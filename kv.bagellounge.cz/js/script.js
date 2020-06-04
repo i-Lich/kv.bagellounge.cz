@@ -68,7 +68,7 @@ $(function() {
         $('.jstore-block-search').removeClass('open');
         $('#lsp-block-userinfo').removeClass('open');
         $('.dropdown-cart').removeClass('open');
-        $('.jstore-header-menu').toggleClass('open');
+        $('.dropdown-menu-burger-content--popup').toggleClass('open-flex');
         $('.show-menu-burger').toggleClass('active');
     });
 

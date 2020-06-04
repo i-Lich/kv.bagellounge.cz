@@ -10,8 +10,23 @@
   #jstore-css{
     .jstore-header-fixed{
       .jstore-header-wrap{
+        .dropdown-menu-burger-content{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-grow: 1;
+          //overflow: visible;
+          position: absolute;
+          top: -15px;
+          left: 20px;
+          width: 275px;
+          #lsp-block-tree--header{
+            overflow: auto;
+          }
+        }
         .jstore-header-fixed-dropdown{
           font-size: 20px;
+          overflow: auto;
         }
       }
     }
