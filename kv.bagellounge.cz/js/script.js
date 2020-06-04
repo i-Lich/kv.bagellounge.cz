@@ -56,6 +56,39 @@ $(function(){
 });
 
 $(function() {
+    function cartHeight(){
+        if(document.getElementById('lsp-block-cart--header').classList.contains('open')) {
+
+            let clientWindowHeight = document.documentElement.clientHeight;
+            let cartBlockTopPosition = document.getElementById('lsp-block-cart--header').getBoundingClientRect().top;
+            let contentHeight = document.querySelector('body').offsetHeight - cartBlockTopPosition;
+            let cartBlockHeight = document.getElementById('lsp-block-cart--header').offsetHeight + cartBlockTopPosition;
+            let maxCartBlockHeight = 0;
+            if (contentHeight > clientWindowHeight) {
+                maxCartBlockHeight =  clientWindowHeight - cartBlockTopPosition -15 ;
+            } else{
+                maxCartBlockHeight =  contentHeight -15;
+            }
+            document.getElementById('lsp-block-cart--header').style.maxHeight = maxCartBlockHeight + 'px';
+        }
+    }
+    function menuHeight(){
+        // if(document.querySelector('.show-menu-burger').classList.contains('active')) {
+        let clientWindowHeight = document.documentElement.clientHeight;
+        let menuBlockTopPosition = 50;
+        let contentHeight = document.querySelector('body').offsetHeight - menuBlockTopPosition;
+        let menuBlockHeight = document.querySelector('.dropdown-menu-burger-content--popup').offsetHeight + menuBlockTopPosition;
+        let maxMenuBlockHeight = 0;
+        if (contentHeight > clientWindowHeight) {
+            maxMenuBlockHeight =  menuBlockTopPosition - cartBlockTopPosition -15 ;
+        } else{
+            maxMenuBlockHeight =  contentHeight -15;
+        }
+        // maxMenuBlockHeight = 200;
+        document.querySelector('.dropdown-menu-burger-content--popup').style.maxHeight = maxMenuBlockHeight + 'px';
+        // }
+    }
+
     // window.jStoreEvents = window.jStoreEvents ? window.jStoreEvents : [];
     // jStoreEvents.push(['pageChanged', null, function (data) {
     //     $('.show-menu-burger').removeClass('active');
@@ -92,38 +125,7 @@ $(function() {
         $('#lsp-block-userinfo').toggleClass('open');
     });
 
-    function cartHeight(){
-        if(document.getElementById('lsp-block-cart--header').classList.contains('open')) {
 
-            let clientWindowHeight = document.documentElement.clientHeight;
-            let cartBlockTopPosition = document.getElementById('lsp-block-cart--header').getBoundingClientRect().top;
-            let contentHeight = document.querySelector('body').offsetHeight - cartBlockTopPosition;
-            let cartBlockHeight = document.getElementById('lsp-block-cart--header').offsetHeight + cartBlockTopPosition;
-            let maxCartBlockHeight = 0;
-            if (contentHeight > clientWindowHeight) {
-                maxCartBlockHeight =  clientWindowHeight - cartBlockTopPosition -15 ;
-            } else{
-                maxCartBlockHeight =  contentHeight -15;
-            }
-            document.getElementById('lsp-block-cart--header').style.maxHeight = maxCartBlockHeight + 'px';
-        }
-    }
-    function menuHeight(){
-        // if(document.querySelector('.show-menu-burger').classList.contains('active')) {
-            let clientWindowHeight = document.documentElement.clientHeight;
-            let menuBlockTopPosition = 50;
-            let contentHeight = document.querySelector('body').offsetHeight - menuBlockTopPosition;
-            let menuBlockHeight = document.querySelector('.dropdown-menu-burger-content--popup').offsetHeight + menuBlockTopPosition;
-            let maxMenuBlockHeight = 0;
-            if (contentHeight > clientWindowHeight) {
-                maxMenuBlockHeight =  menuBlockTopPosition - cartBlockTopPosition -15 ;
-            } else{
-                maxMenuBlockHeight =  contentHeight -15;
-            }
-            // maxMenuBlockHeight = 200;
-            document.querySelector('.dropdown-menu-burger-content--popup').style.maxHeight = maxMenuBlockHeight + 'px';
-        // }
-    }
 
     $(".icon-cart").click(function () {
         $('.jstore-header-menu').removeClass('open');
