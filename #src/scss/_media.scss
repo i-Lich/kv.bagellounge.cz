@@ -194,6 +194,12 @@
 }
 
 @media (max-width: 767px) {
+  #jstore-css{
+    .jstore-tag.h1 {
+      word-break: break-all;
+    }
+  }
+
   #jstore-css .container{
     max-width: none;
   }
