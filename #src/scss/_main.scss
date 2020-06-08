@@ -731,7 +731,7 @@ a.all-menu{
   justify-content:flex-start;
 }
 
-#jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item{
+#jstore-css #lsp-block-content .lsp-js-block-items .lsp-block-item {
   float: none;
   border: 0;
   border-radius: 5%;
@@ -747,17 +747,16 @@ a.all-menu{
   text-align: center;
   background-color: #404040;
   transition: all 3s ease;
+
   &:hover {
-    background: url(https://kv.bagellounge.cz/wp-content/themes/images/article-links/bg.jpg);
-    opacity: 1;
-    .lsp-block-item-price span{
-      color: $whiteColor;
-    }
+
   }
-  .lsp-block-item-image{
+
+  .lsp-block-item-image {
     order: 1;
     width: 100%;
-    .lsp-block-item-image-link{
+
+    .lsp-block-item-image-link {
       background: url("../images/nophoto.png") center center no-repeat;
       background-size: cover;
       border-radius: 5% 5% 0 0;
@@ -765,7 +764,8 @@ a.all-menu{
       width: 100%;
       height: auto;
       min-height: 240px;
-      img{
+
+      img {
         border-radius: 5% 5% 0 0;
         object-fit: cover;
         max-width: none;
@@ -773,8 +773,10 @@ a.all-menu{
         min-height: 240px;
       }
     }
+
   }
-  .lsp-block-item-name{
+
+  .lsp-block-item-name {
     order: 2;
     height: auto;
     text-transform: uppercase;
@@ -782,21 +784,28 @@ a.all-menu{
     align-content: flex-start;
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 0 0 0;
     width: 100%;
     padding: 0;
     text-align: left;
-    &:before{
-      content: '';
-      display: block;
-      height: 20px;
-      margin-bottom: 10px;
-      width: 100%;
-      background-color: $bgPopupColor;
+
+    &:hover {
+      background: url(https://kv.bagellounge.cz/wp-content/themes/images/article-links/bg.jpg);
+      opacity: 1;
+
     }
-    a{
+
+    //&:after{
+    //  content: '';
+    //  display: block;
+    //  height: 20px;
+    //  margin-bottom: 10px;
+    //  width: 100%;
+    //  background-color: $bgPopupColor;
+    //}
+    a {
       font-family: "Gilroy", sans-serif;
-      padding: 0 0 0 13px;
+      padding: 10px 13px 10px 13px;
       font-size: 18px;
       word-break: break-word;
       font-weight: 300;
@@ -806,12 +815,12 @@ a.all-menu{
       text-decoration: none;
     }
   }
-  .lsp-block-item-description{
+
+  .lsp-block-item-description {
     width: 100%;
     order: 3;
-    margin: 0;
     padding: 0 13px 0 13px;
-    margin: 0 0 12px 0;
+
     height: auto;
     flex-grow: 1;
     text-align: justify;
@@ -828,56 +837,85 @@ a.all-menu{
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     position: relative;
-    p{
+
+    p {
       margin: 0;
       padding: 0;
       font-size: 16px;
     }
   }
-  .lsp-block-item-price{
+
+  .lsp-block-item-price {
     position: static;
     display: flex;
     justify-content: flex-start;
-    min-height: 37px;
-    margin: auto 0 0 0;
+    min-height: 42px;
+    margin: 10px 0 0 13px;
     flex-wrap: wrap;
     width: calc(100% - 1rem);
-    padding: 0 60px 0 0;
-    margin-left: 13px;
+    padding: 0 160px 0 0;
     align-items: center;
     font-family: "Gilroy", sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 2.11;
     order: 4;
-    span,
-    .lsp-block-item-measurement{
+
+    span {
       font-family: $secondFont;
-      font-size: 18px;
-      font-weight: 800;
-      line-height: 2.11;
-      padding-left: 3px;
-    }
-  }
-  .lsp-block-item-add-to-cart{
-    font-size: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    align-self: flex-end;
-    margin: 0;
-    position: absolute;
-    order: 5;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    &:before{
-      font-family: 'Font Awesome\ 5 Free';
-      content: "\f07a";
-      display: block;
       font-size: 22px;
-      font-weight: 900;
-      position: absolute;
-      top: 13px;
-      left: 7px;
+      font-weight: 800;
+      line-height: 22px;
+
+      &.lsp-block-item-measurement {
+        padding-left: 3px;
+      }
     }
   }
-}
+
+    .lsp-block-item-add-to-cart {
+      font-size: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      align-self: flex-end;
+      margin: 0;
+      position: absolute;
+      order: 5;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      &::before{
+        content: "to cart";
+        width: 120px;
+        height: 100%;
+        font-size: 20px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        padding: 0 0 0px 10px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        border-top-left-radius: 22px;
+        border-bottom-left-radius: 22px;
+        left: -100px;
+        background-color: $mainColor;
+
+      }
+      &::after {
+        font-family: 'Font Awesome\ 5 Free';
+        content: "\f07a";
+        display: block;
+        font-size: 22px;
+        font-weight: 900;
+        position: absolute;
+        top: 13px;
+        left: 7px;
+      }
+      &:hover{
+        &::before{
+        background-color: $hoverColor;
+        }
+      }
+    }
+  }
