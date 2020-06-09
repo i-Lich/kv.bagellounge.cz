@@ -294,6 +294,23 @@
   border: 0;
 }
 
+#jstore-css{
+  .jstore-header-fixed{
+    .jstore-header-wrap{
+      #lsp-block-tree--header-2{
+        li{
+          ul.lsp-js-menu-childs{
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            margin: 0 0 0 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 //стилизация скролла корзины
 
 .jstore-header-fixed #lsp-block-cart--header::-webkit-scrollbar-track
