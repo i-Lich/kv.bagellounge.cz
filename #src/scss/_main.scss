@@ -105,7 +105,7 @@
       justify-content: flex-start;
       align-items: center;
       flex-grow: 1;
-      overflow: hidden;
+      //overflow: hidden;
     }
     a.all-menu{
       float: left;
@@ -151,7 +151,7 @@
       .lsp-js-menu-childs{
         background-color: $lessGrayColor;
         position: absolute;
-
+        min-height: 0;
         margin: 0;
         top: 35px;
         display: flex !important;
@@ -499,6 +499,14 @@
         }
       }
     }
+    &.open{
+      .lsp-block-cart-inner{
+        .lsp-cart-items-list,
+        .lsp-info-message-bottom{
+          display: block !important;
+        }
+      }
+    }
   }
   #lsp-block-recommendation {
     text-align: center;
@@ -562,6 +570,11 @@
   .lsp-block-gift-more,
   .cart-more,
   .cart-to-order{
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     display: none;
     position: absolute;
     height: auto;

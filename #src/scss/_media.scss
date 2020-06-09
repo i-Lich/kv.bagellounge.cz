@@ -274,7 +274,6 @@
   }
   #jstore-css .content-left-side {
     flex: 0 0 auto;
-
     #lsp-block-tree,
     .lsp-js-recommendation-items,
     .lsp-cart-items-list,
@@ -329,7 +328,23 @@
   #jstore-css .content-right-side {
     padding: 0;
     margin: 20px 0 0 0;
+
     #lsp-block-content{
+      .search-page{
+        form.jstore-js-search-form{
+          display: flex;
+          label.label-row{
+            flex: 1 1 auto;
+            span{
+              input{
+                flex: 1 1 auto;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
       .lsp-block-items{
         .lsp-block-item{
           .lsp-block-item-name{

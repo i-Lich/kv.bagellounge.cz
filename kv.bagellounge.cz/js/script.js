@@ -50,8 +50,7 @@ $(function(){
         $('.lsp-block-gift-accept').toggleClass('open');
     });
     $(".cart-more").click(function () {
-        $('#lsp-block-cart .lsp-cart-items-list').toggleClass('open');
-        $('#lsp-block-cart .lsp-info-message-bottom').toggleClass('open');
+        $('#lsp-block-cart').toggleClass('open');
     });
 });
 
@@ -162,7 +161,7 @@ jStoreEvents.push(['pageChanged', null, function (data) {
     $('#lsp-block-userinfo').removeClass('open');
     $('#lsp-block-tree--header').removeClass('open');
     $('#lsp-block-cart--header').removeClass('open');
-    $('.lsp-cart-items-list').removeClass('open');
+    $('.lsp-block-cart').removeClass('open');
     $('.lsp-info-message-bottom').removeClass('open');
     $('#lsp-block-gift').removeClass('open');
     $('#lsp-block-happy-hour').removeClass('open');
