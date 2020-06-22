@@ -9,6 +9,10 @@
   .label-row-text-info{
     display: none;
   }
+
+    span.label-row-text:first-letter{
+      text-transform: uppercase;
+    }
   .lsp-js-form-field-userAgreement{
     .label-row-field{
       font-size: 16px;
