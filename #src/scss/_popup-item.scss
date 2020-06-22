@@ -25,6 +25,12 @@
         background: $grayColor;
         border-left: 2px solid $mainColor;
       }
+      .lsp-button-red{
+        &:before{
+          content: '\2714';
+          padding-right: 5px;
+        }
+      }
       .lsp-button-red:hover{
         background: $mainColor;
       }
