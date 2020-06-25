@@ -13,7 +13,22 @@
   }
   .lsp-popup-energy-cont{
     display: none;
-    border-top: 2px solid $grayColor;
+  }
+  .lsp-popup-item-description-block{
+    .lsp-popup-energy-cont{
+      display: none !important;
+    }
+    .lsp-js-modifiers-block{
+      .lsp-js-modifiers-container{
+        .lsp-modifier-item{
+          .lsp-modifier-name-c{
+            .lsp-modifer-minmax-c{
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
   .lsp-type-modifer-group-items-c{
 

@@ -143,6 +143,7 @@ $(function() {
         const buttonsToOrder = document.querySelectorAll('.lsp-block-cart-order-button-cont a');
         buttonsToOrder.forEach(function(elem) {
             elem.addEventListener("click", function() {
+                $('.dropdown-cart').removeClass('open');
                 $([document.documentElement, document.body]).animate({
                                 scrollTop: $("#lsp-block-content").offset().top
                             }, 1000);
