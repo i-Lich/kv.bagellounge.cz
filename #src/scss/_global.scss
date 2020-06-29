@@ -398,7 +398,25 @@ template {
 
 #jstore-css{
   display: flex;
+  .jstore-tag.h1 {
+    &:first-letter{
+      text-transform: uppercase;
+    }
+  }
 }
+
+#jstore-css{
+  textarea{
+    -webkit-appearance: textarea;
+  }
+  input[type="radio"]{
+    -webkit-appearance: radio;
+  }
+  input[type="checkbox"]{
+    -webkit-appearance: checkbox;
+  }
+}
+
 #jstore-css .lsp-block-content--preloader{
   font-size: 40px;
   color: $whiteColor;
