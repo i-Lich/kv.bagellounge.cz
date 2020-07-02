@@ -40,6 +40,13 @@
     .lsp-type-modifier-item{
       span{
         border-left: 2px solid transparent;
+        &:before{
+          font-family: "Font Awesome 5 Free";
+          content: '\f0c8';
+          padding-right: 10px;
+          color: $whiteColor;
+
+        }
       }
       &:hover span {
         background: $transparent;
@@ -47,8 +54,10 @@
       }
       .lsp-button-red{
         &:before{
-          content: '\2714';
-          padding-right: 5px;
+          font-family: "Font Awesome 5 Free";
+          content: '\f14a';
+          padding-right: 10px;
+          color: $mainColor;
         }
       }
       .lsp-button-red:hover{
